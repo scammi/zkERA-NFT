@@ -8,7 +8,7 @@ export default async function (hre: HardhatRuntimeEnvironment) {
   console.log(`Running deploy script for the Greeter contract`);
 
   // Initialize the wallet.
-  const wallet = Wallet.fromMnemonic("become rhythm degree culture unfair vocal post summer plate camera viable echo");
+  const wallet = Wallet.fromMnemonic(process.env.MNEMONIC);
 
   // Create deployer object and load the artifact of the contract you want to deploy.
   const deployer = new Deployer(hre, wallet);
